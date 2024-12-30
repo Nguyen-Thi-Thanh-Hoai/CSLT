@@ -1,0 +1,25 @@
+def la_so_nguyen_to(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def kiem_tra_so_nguyen_to_trong_day(day_so):
+    ket_qua = {}
+    for so in day_so:
+        ket_qua[so] = la_so_nguyen_to(so)
+    return ket_qua
+
+# Nhập vào dãy số từ người dùng
+try:
+    day_so = list(map(int, input("Nhập vào dãy số, cách nhau bởi dấu cách: ").split()))
+except ValueError:
+    print("Vui lòng chỉ nhập số nguyên.")
+
+# Kiểm tra và in kết quả
+ket_qua = kiem_tra_so_nguyen_to_trong_day(day_so)
+print("Kết quả kiểm tra số nguyên tố:")
+for so, la_nguyen_to in ket_qua.items():
+    print(f"{so} là số nguyên tố." if la_nguyen_to else f"{so} không phải là số nguyên tố.")
