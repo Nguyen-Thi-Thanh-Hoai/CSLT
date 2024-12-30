@@ -1,0 +1,24 @@
+#7.4
+# def chu_hoa_chu_thuong(string):
+#   viet_thuong = string.lower()
+#   viet_hoa = string.upper()
+#   return viet_thuong, viet_hoa
+# chuoi=input("")
+# viet_thuong,viet_hoa = chu_hoa_chu_thuong(chuoi)
+# print(viet_thuong)
+# print(viet_hoa)
+
+#7.5
+def dem_ki_tu(string):
+  chucai = 0
+  chuso= 0
+  for character in string:
+    if character.isalpha():
+      chucai += 1
+    elif character.isdigit():
+      chuso += 1
+  return chucai, chuso
+string = input("")
+chucai, chuso = dem_ki_tu(string)
+print("Chu cai:", chucai)
+print("Chu so:", chuso)
