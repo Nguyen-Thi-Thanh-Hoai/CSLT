@@ -1,0 +1,9 @@
+n=int(input('n='))
+a=[0]*n
+for i in range (n):
+    a[i]=int(input(""))
+sl=0
+for i in range (n):
+    if (a[i]%2==0):
+        sl=sl+1
+print("So chu so chan la:",sl)
